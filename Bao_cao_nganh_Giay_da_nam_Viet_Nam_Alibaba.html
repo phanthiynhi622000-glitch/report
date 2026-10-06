@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Báo cáo thị trường xuất khẩu giày da nam Việt Nam trên Alibaba.com 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+    :root {
+      --p: #002B5B; --s: #1F75FE; --g: #D4A017; --bg: #F8F9FA; --text: #2C3E50;
+      --sidebar-bg: #07162C; --card-bg: #FFFFFF; --sw: 260px; --border-radius: 12px; --transition: all 0.3s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; max-width: 100vw; scroll-behavior: smooth; }
+    body { font-family: 'Lexend', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    canvas { max-width: 100% !important; display: block; margin: 0 auto; }
+    .sidebar { position: fixed; top: 0; left: 0; width: var(--sw); height: 100vh; background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--p) 100%); color: #fff; padding: 2rem 1.5rem; overflow-y: auto; z-index: 100; box-shadow: 4px 0 15px rgba(0,0,0,0.1); }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 700; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .brand i { color: var(--g); }
+    .sidebar nav ul { list-style: none; }
+    .sidebar nav ul li { margin-bottom: 0.5rem; }
+    .sidebar nav ul li a { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.75rem 1rem; border-radius: var(--border-radius); font-size: 0.95rem; font-weight: 600; transition: var(--transition); }
+    .sidebar nav ul li a:hover, .sidebar nav ul li a.active { color: #fff; background-color: rgba(255,255,255,0.06); border-left: 4px solid var(--g); }
+    .main-content { margin-left: var(--sw); width: calc(100% - var(--sw)); padding: 2.5rem 3rem; max-width: 1400px; position: relative; }
+    .header-banner { background: linear-gradient(135deg, rgba(7, 22, 44, 0.9) 0%, rgba(0, 43, 91, 0.75) 100%), url('https://venasshoes.com.vn/wp-content/uploads/2024/06/giay-tay-nam-da-cao-cap-venas-shoes-4.jpg') no-repeat center center; background-size: cover; background-position: center center; padding: 4rem 2.5rem; border-radius: var(--border-radius); position: relative; margin-bottom: 2rem; box-shadow: 0 8px 25px rgba(0,43,91,0.15); min-height: 280px; max-height: 340px; display: flex; flex-direction: column; justify-content: center; }
+    .badge { display: inline-block; background-color: var(--g); color: #07162C; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 50px; margin-bottom: 1rem; width: fit-content; }
+    .title { font-size: 2.3rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.3; color: #fff; }
+    .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 1.5rem; }
+    .section-card { background-color: var(--card-bg); border-radius: var(--border-radius); padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.02); width: 100%; }
+    .section-title { font-size: 1.4rem; font-weight: 700; color: var(--p); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--bg); padding-bottom: 0.75rem; }
+    .section-title i { color: var(--g); }
+    .sub-title { font-size: 1.15rem; font-weight: 700; color: var(--p); margin: 2rem 0 1rem 0; border-left: 4px solid var(--g); padding-left: 10px; }
+    p { margin-bottom: 1rem; color: #576574; }
+    .highlight { background-color: #F0F4F8; border-left: 4px solid var(--s); padding: 1rem 1.25rem; border-radius: 0 var(--border-radius) var(--border-radius) 0; margin-bottom: 1.25rem; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; width: 100%; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; width: 100%; }
+    .info-card { background-color: var(--bg); border-radius: var(--border-radius); padding: 1.5rem; border: 1px solid rgba(0,0,0,0.04); transition: var(--transition); }
+    .info-val { font-size: 1.6rem; font-weight: 800; color: var(--p); }
+    .info-lbl { font-size: 0.85rem; font-weight: 600; color: var(--s); margin-top: 0.35rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.85rem; }
+    table th { background-color: var(--p); color: #fff; font-weight: 600; text-align: left; padding: 0.8rem 1rem; border: 1px solid rgba(0,0,0,0.05); }
+    table td { padding: 0.8rem 1rem; border: 1px solid rgba(0,0,0,0.05); vertical-align: middle; }
+    table tr:nth-child(even) { background-color: #F8FAFC; }
+    .table-container { overflow-x: auto; margin-top: 1rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); width: 100%; }
+    .link-store-btn { display: inline-flex; align-items: center; justify-content: center; background-color: #8B4513; color: white !important; padding: 0.5rem 0.8rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.75rem; white-space: nowrap; }
+    .market-chart-grid { display: grid; grid-template-columns: minmax(360px, 0.9fr) minmax(480px, 1.1fr); gap: 1.5rem; margin: 1.5rem 0 2rem; align-items: stretch; }
+    .chart-box { background: linear-gradient(180deg, #FFFFFF 0%, #FBFCFF 100%); border: 1px solid rgba(0,43,91,0.08); border-radius: 18px; padding: 1.5rem 1.5rem 1.1rem; width: 100%; min-height: 430px; position: relative; box-shadow: 0 12px 30px rgba(0,43,91,0.06); overflow: hidden; max-height: 460px; }
+    .chart-box::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--g), var(--s)); }
+    .chart-box canvas { width: 100% !important; height: 330px !important; max-height: 400px !important; }
+    .chart-box.wide { min-height: 420px; margin-top: 1.2rem; }
+    .chart-box.wide canvas { height: 320px !important; }
+    .chart-insight { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.2rem; }
+    .insight-pill { background: #F4F7FB; border: 1px solid rgba(0,43,91,0.06); border-radius: 12px; padding: 0.9rem 1rem; }
+    .insight-pill strong { display: block; font-size: 1.35rem; color: var(--p); line-height: 1.1; }
+    .insight-pill span { font-size: 0.78rem; color: #6B7280; font-weight: 600; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.2rem 0 1.5rem; }
+    .potential-box { background: #FFF8E5; border: 1px solid rgba(212,160,23,0.25); border-left: 5px solid var(--g); border-radius: 14px; padding: 1.2rem 1.4rem; }
+    .potential-box h4 { color: var(--p); margin-bottom: 0.55rem; font-size: 1rem; }
+    .potential-box p { margin-bottom: 0; font-size: 0.9rem; }
+    .rfq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+    .rfq-card { background-color: var(--card-bg); border-radius: var(--border-radius); padding: 1.5rem; border: 1px solid rgba(0,0,0,0.06); border-top: 4px solid var(--g); box-shadow: 0 4px 12px rgba(0,0,0,0.04); transition: all 0.3s ease; display: flex; flex-direction: column; gap: 0.8rem; }
+    .rfq-title { font-size: 1.05rem; font-weight: 700; color: var(--p); line-height: 1.4; }
+    .rfq-desc { font-size: 0.88rem; color: #576574; line-height: 1.6; word-wrap: break-word; text-align: justify; }
+    .rfq-meta { font-size: 0.78rem; color: var(--s); font-weight: 700; }
+    .rfq-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,0,0,0.06); }
+    .persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+    .persona-card { background-color: #F8F9FA; padding: 1.8rem; border-radius: 12px; border-top: 4px solid var(--s); box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .persona-card h4 { color: var(--p); margin-bottom: 1rem; font-size: 1.1rem; }
+    .persona-card ul { list-style: none; padding-left: 0; font-size: 0.85rem; color: #576574; }
+    .persona-card li { margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px; }
+    .persona-card li::before { content: '\2714'; color: var(--s); font-weight: bold; }
+    .strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 1.5rem 0 1.75rem; }
+    .strategy-card { background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid rgba(0,43,91,0.08); border-radius: 14px; padding: 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,0.035); }
+    .strategy-no { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background: rgba(31,117,254,0.10); color: var(--s); font-weight:800; font-size:0.82rem; margin-bottom:0.75rem; }
+    .strategy-card h4 { color: var(--p); font-size: 1rem; margin-bottom: 0.55rem; }
+    .strategy-card p { font-size: 0.86rem; margin-bottom: 0; color: #576574; }
+    .strategy-highlight { margin-top: 0.5rem; }
+    .research-notes { margin-top: 2rem; padding: 1.6rem; background: #F0F4F8; border-left: 4px solid var(--p); border-radius: 12px; }
+    .research-notes h3 { color: var(--p); font-size: 1.08rem; margin-bottom: 1rem; display:flex; align-items:center; gap:8px; }
+    .source-table a { color: var(--s); font-weight: 700; text-decoration: none; }
+    .source-table a:hover { text-decoration: underline; }
+    .citation { color: var(--s); font-weight: 600; text-decoration: none; font-size: 0.8em; }
+    .citation:hover { text-decoration: underline; }
+    .source-list a { color: var(--s); text-decoration: none; }
+    .source-list a:hover { text-decoration: underline; }
+    .niche-notice { background: #FFF9E6; border-left: 4px solid #D4A017; padding: 1rem 1.2rem; border-radius: 6px; margin: 1rem 0 1.5rem; font-size: 0.88rem; color: #7a5b00; }
+    footer { background: linear-gradient(135deg, #07162C 0%, #002B5B 100%); color: #fff; padding: 2.2rem; border-radius: 18px 18px 0 0; margin-top: 4rem; margin-left: 0; box-shadow: 0 -8px 24px rgba(0,0,0,0.08); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: stretch; }
+    .footer-logo { display:flex; align-items:center; gap:10px; font-size:1.25rem; font-weight:800; margin-bottom:0.8rem; }
+    .footer-logo i { color: var(--g); }
+    .footer-brand-block p { color: rgba(255,255,255,0.72); max-width: 540px; margin-bottom:0; }
+    .footer-contact-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.3rem; }
+    .footer-contact-card h3 { font-size: 1rem; margin-bottom:0.35rem; color:#fff; }
+    .fc-name { font-size:1.25rem; font-weight:800; color:#fff; margin-bottom:0.9rem; }
+    .footer-action { display:flex; align-items:center; gap:10px; color:#fff !important; text-decoration:none; padding:0.72rem 0; border-top:1px solid rgba(255,255,255,0.10); word-break: break-word; }
+    .footer-action i { color: var(--g); width: 18px; }
+    .footer-action:hover span { text-decoration: underline; }
+    .foot-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5); padding-top: 1rem; }
+    .chart-fallback { font-size: 0.85rem; color: #7B8794; text-align: center; padding: 2rem; }
+    @media (max-width: 1100px) { .main-content { padding: 2rem; } .grid-2, .grid-3, .market-chart-grid, .pricing-grid { grid-template-columns: 1fr; } .chart-box { min-height: 390px; } .chart-insight { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .main-content { margin-left: 0; width: 100%; padding: 1rem; } .sidebar { position: relative; width: 100%; height: auto; display: flex; flex-direction: column; padding: 12px; } .sidebar nav ul { display: flex; flex-direction: row; gap: 8px; overflow: auto; } .rfq-grid, .persona-grid, .strategy-grid { grid-template-columns: 1fr; } footer { padding:2rem 1.5rem 1rem 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="sidebar">
+<div class="brand"><i class="fa-solid fa-shoe-prints"></i> <span>Báo cáo thị trường B2B</span></div>
+<nav>
+<ul>
+<li><a class="active" href="#sec1"><i class="fa-solid fa-flag"></i> Chương 1: Tóm tắt</a></li>
+<li><a href="#sec2"><i class="fa-solid fa-globe"></i> Chương 2: Thị trường</a></li>
+<li><a href="#sec3"><i class="fa-solid fa-warehouse"></i> Chương 3: Nhà cung cấp</a></li>
+<li><a href="#sec4"><i class="fa-solid fa-award"></i> Chương 4: Sản phẩm</a></li>
+<li><a href="#sec5"><i class="fa-solid fa-clipboard-list"></i> Chương 5: RFQ</a></li>
+<li><a href="#sec6"><i class="fa-solid fa-magnifying-glass"></i> Chương 6: Người mua</a></li>
+<li><a href="#sec7"><i class="fa-solid fa-tags"></i> Chương 7: Giá bán</a></li>
+<li><a href="#sec8"><i class="fa-solid fa-rocket"></i> Chương 8: Chiến lược</a></li>
+</ul>
+</nav>
+</div>
+<div class="main-content">
+<div class="header-banner">
+<span class="badge">Báo cáo xuất khẩu B2B 2026</span>
+<h1 class="title">Báo cáo thị trường xuất khẩu giày da nam Việt Nam trên Alibaba.com 2026</h1>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Dòng mẫu bán chạy, dư địa thị trường &amp; các quốc gia đang có nhu cầu mua — Ngành giày da nam (Oxford, Loafer, Business casual, Handmade) từ Việt Nam</p>
+<div class="meta">
+<span><i class="fa-solid fa-user-tie"></i> Người lập: <strong>Ý Nhi</strong></span>
+<span><i class="fa-solid fa-calendar-days"></i> Ngày lập: <strong>05/10/2026</strong></span>
+</div>
+</div>
+
+<!-- ===== CHAPTER 1: EXECUTIVE SUMMARY ===== -->
+<div class="section-card" id="sec1">
+<h2 class="section-title"><i class="fa-solid fa-flag"></i> Chương 1: Tóm tắt điều hành</h2>
+<div class="grid-3">
+<div class="info-card"><div class="info-val">~29 tỷ USD</div><div class="info-lbl">Kim ngạch xuất khẩu giày dép Việt Nam 2025</div></div>
+<div class="info-card"><div class="info-val">#2</div><div class="info-lbl">Vị trí xuất khẩu giày da toàn cầu (sau Trung Quốc)</div></div>
+<div class="info-card"><div class="info-val">247,5 tỷ USD</div><div class="info-lbl">Quy mô thị trường giày da toàn cầu dự báo 2030</div></div>
+</div>
+<div class="highlight"><strong>Cơ hội trọng tâm:</strong> Việt Nam đang giữ vị trí thứ 2 thế giới về xuất khẩu giày da và là nhà cung cấp giày lớn thứ hai tại thị trường Hoa Kỳ. Với dòng giày da nam cao cấp (Oxford, Loafer, Business casual, Handmade Goodyear), nhà sản xuất Việt Nam có lợi thế kép: <em>thuế suất ưu đãi</em> (EVFTA với EU, CPTPP) và <em>uy tín "Vietnam made"</em> đang dần thay thế Trung Quốc ở phân khúc da thật. Đây là thời điểm vàng để VENASS đưa dòng giày da nam lên Alibaba.com nhắm vào khách hàng OEM/ODM và nhà phân phối quốc tế.</div>
+<p>Thị trường giày da toàn cầu được định giá khoảng <strong>195,2 tỷ USD trong năm 2025</strong> và dự kiến đạt <strong>247,5 tỷ USD vào năm 2030</strong> <a href="https://localandglobaleco.com/2025/05/27/stepping-ahead-in-style-and-sustainability-leather-footwear-industry-outlook-2025/" target="_blank" class="citation">[Nguồn]</a>, tăng trưởng ổn định ở mức <strong>CAGR ~3,9%</strong> giai đoạn 2022–2028 <a href="https://www.researchandmarkets.com/reports/5938569/leather-footwear-market-global-industry-size" target="_blank" class="citation">[Nguồn]</a>. Trong đó, phân khúc giày da cao cấp (luxury footwear) tăng nhanh hơn với CAGR ~6,1% <a href="https://www.custommarketinsights.com/report/luxury-footwear-market/" target="_blank" class="citation">[Nguồn]</a>.</p>
+<p>Việt Nam đã xuất khẩu giày dép sang hơn <strong>150 thị trường</strong>, với các thị trường chính là Hoa Kỳ, EU, Anh, Trung Quốc và Nhật Bản <a href="https://itpc.hochiminhcity.gov.vn/web/en/-/vietnam-is-world-s-second-largest-footwear-exporter" target="_blank" class="citation">[Nguồn]</a>. Riêng kim ngạch xuất khẩu giày dép sang Hoa Kỳ năm 2025 đạt khoảng <strong>8,3 tỷ USD</strong> <a href="https://www.theconsumersfeedback.com/guestpost/vietnam-footwear-export-markets-2025-top-destinations-driving-vietnam-footwear-exports/tags/Vietnam-footwear-exports-by-country" target="_blank" class="citation">[Nguồn]</a>. Đối với dòng giày da nam, bốn nhóm mẫu dẫn dắt nhu cầu toàn cầu là <strong>Oxford/Derby công sở, Loafer/Slip-on da thật, Business casual và Handmade cao cấp (Goodyear welt)</strong> — đây cũng chính là các nhóm sản phẩm mà VENASS đang sản xuất.</p>
+</div>
+
+<!-- ===== CHAPTER 2: GLOBAL MARKET OVERVIEW ===== -->
+<div class="section-card" id="sec2">
+<h2 class="section-title"><i class="fa-solid fa-globe"></i> Chương 2: Tổng quan thị trường toàn cầu</h2>
+<div class="chart-insight">
+<div class="insight-pill"><strong>195,2 tỷ USD</strong><span>Quy mô thị trường giày da toàn cầu 2025</span></div>
+<div class="insight-pill"><strong>3,9%</strong><span>CAGR ngành giày da 2022–2028</span></div>
+<div class="insight-pill"><strong>8,3 tỷ USD</strong><span>Xuất khẩu giày Việt Nam sang Hoa Kỳ 2025</span></div>
+</div>
+<div class="market-chart-grid">
+<div class="chart-box"><canvas id="shareChart" width="700" height="350"></canvas></div>
+<div class="chart-box"><canvas id="growthChart" width="700" height="350"></canvas></div>
+</div>
+<p>Ngành giày da toàn cầu vận hành theo mô hình "tam giác sản xuất": Trung Quốc và Việt Nam giữ vai trò nhà máy, trong khi Hoa Kỳ và EU là hai thị trường tiêu thụ lớn nhất. Theo dữ liệu thương mại, các quốc gia xuất khẩu giày da hàng đầu theo giá trị gồm <strong>Trung Quốc, Việt Nam, Italy, Đức và Indonesia</strong> <a href="https://www.linkedin.com/pulse/global-market-leather-shoes-exports-2022-tendata-guodong-cui-r2v7c" target="_blank" class="citation">[Nguồn]</a>. Việt Nam đã vươn lên vị trí <strong>nhà xuất khẩu giày da lớn thứ 2 thế giới</strong>, xuất khẩu hơn 1 tỷ đôi mỗi năm <a href="https://www.marketresearch.com/China-Research-and-Intelligence-Co-Ltd-v3627/Research-Footwear-Vietnam-31980276/" target="_blank" class="citation">[Nguồn]</a>.</p>
+
+<h3 class="sub-title">Các quốc gia xuất khẩu hàng đầu (nhà sản xuất/nhà cung cấp)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th>#</th><th>Quốc gia</th><th>Ước tính thị phần xuất khẩu</th><th>Nhận định chính</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Trung Quốc</td><td>~36%</td><td>Nhà sản xuất &amp; xuất khẩu lớn nhất; cạnh tranh giá rất mạnh ở phân khúc phổ thông</td></tr>
+<tr><td>2</td><td>Việt Nam</td><td>~14%</td><td>Hơn 1 tỷ đôi/năm; xuất khẩu 387 triệu đôi giày da trị giá ~9,6 tỷ USD; năng lực OEM/ODM ngày càng mạnh</td></tr>
+<tr><td>3</td><td>Italy</td><td>~9%</td><td>Dẫn đầu phân khúc cao cấp/luxury; lợi thế thương hiệu và da thuộc thủ công</td></tr>
+<tr><td>4</td><td>Đức</td><td>~5%</td><td>Trung tâm sản xuất &amp; phân phối giày cao cấp, chuẩn chất lượng khắt khe</td></tr>
+<tr><td>5</td><td>Indonesia</td><td>~4%</td><td>Chi phí thấp, tăng trưởng nhanh nhờ dịch chuyển sản xuất khỏi Trung Quốc</td></tr>
+<tr><td>6</td><td>Ấn Độ</td><td>~3%</td><td>Mạnh về da thuộc &amp; giày da truyền thống, giá thấp</td></tr>
+<tr><td>7</td><td>Thổ Nhĩ Kỳ</td><td>~3%</td><td>Lợi thế khoảng cách &amp; thời gian giao hàng tới EU</td></tr>
+<tr><td>8</td><td>Brazil</td><td>~2%</td><td>Nguồn cung cho thị trường châu Mỹ, da bò chất lượng tốt</td></tr>
+</tbody>
+</table>
+</div>
+<div class="chart-box wide"><canvas id="exportCountriesChart" width="700" height="350"></canvas></div>
+
+<h3 class="sub-title">Các thị trường nhập khẩu hàng đầu (người mua)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th>#</th><th>Thị trường</th><th>Ước tính thị phần nhập khẩu</th><th>Xu hướng &amp; nhu cầu</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Hoa Kỳ</td><td>~20%</td><td>Thị trường nhập khẩu giày lớn nhất thế giới (~26,55 tỷ USD); Việt Nam là nhà cung cấp lớn thứ 2</td></tr>
+<tr><td>2</td><td>Đức</td><td>~8%</td><td>Nhập khẩu ~10,66 tỷ USD; trung tâm phân phối giày lớn nhất châu Âu</td></tr>
+<tr><td>3</td><td>Pháp</td><td>~6%</td><td>Thị trường thời trang cao cấp, ưa chuộng da thật &amp; thiết kế tinh tế</td></tr>
+<tr><td>4</td><td>Anh (UK)</td><td>~5%</td><td>Hậu Brexit vẫn phụ thuộc mạnh vào nhập khẩu giày, chuộng phong cách cổ điển Anh</td></tr>
+<tr><td>5</td><td>Nhật Bản</td><td>~4%</td><td>Yêu cầu chất lượng, độ tỉ mỉ và đóng gói rất cao; giá tốt</td></tr>
+<tr><td>6</td><td>Hà Lan</td><td>~4%</td><td>Cửa ngõ phân phối EU (cảng Rotterdam), mạnh về nhập khẩu bán lại</td></tr>
+<tr><td>7</td><td>Bỉ</td><td>~3%</td><td>Trung tâm logistics; kim ngạch xuất khẩu giày da của Việt Nam sang Bỉ xếp hạng cao</td></tr>
+<tr><td>8</td><td>Trung Quốc</td><td>~3%</td><td>Nhập khẩu ngược giày da phân khúc cao cấp từ châu Âu</td></tr>
+</tbody>
+</table>
+</div>
+<div class="chart-box wide"><canvas id="importCountriesChart" width="700" height="350"></canvas></div>
+<p style="font-size:0.8rem;color:#7B8794;">Ghi chú: Thị phần là ước tính tổng hợp từ dữ liệu thương mại công bố (tendata, reportlinker, Vietnam Trade Portal) và có thể thay đổi theo từng năm. Dữ liệu chi tiết theo quốc gia cần đối chiếu với Hải quan Việt Nam và ITC Trade Map.</p>
+<h3 class="sub-title">Phân tích chi tiết các quốc gia nhập khẩu hàng đầu &amp; mức độ phù hợp với Venas</h3>
+<p>Bảng dưới đây phân tích sâu từng thị trường nhập khẩu giày da lớn nhất — quy mô, tăng trưởng và mức độ phù hợp với danh mục sản phẩm của Venas.</p>
+<div class="table-container">
+<table>
+<thead><tr><th>#</th><th>Quốc gia</th><th>Quy mô &amp; tăng trưởng nhập khẩu</th><th>Mức độ phù hợp với Venas</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Hoa Kỳ</strong></td><td>Thị trường nhập khẩu giày lớn nhất thế giới. Giày da đế cao su nhập khẩu chiếm ~19,4% thị phần toàn cầu (2024), tăng ~16% so với năm trước <a href="https://gtaic.ai/files/reports/Japan_640399_472a5eb1-bc5d-4cb3-bcce-c5058906dcf2.pdf" target="_blank" class="citation">[Nguồn]</a>. Tổng nhập khẩu giày ~26,55 tỷ USD <a href="https://www.reportlinker.com/dataset/f38cbecb931b68382499ce23625626ad5cd2d19f" target="_blank" class="citation">[Nguồn]</a>; Việt Nam cung cấp ~8,3 tỷ USD (2025).</td><td>⭐ <strong>Rất cao</strong> — khách chuộng Oxford, Loafer, business casual da thật; tệp brand OEM/ODM và nhà phân phối lớn, sức mua cao.</td></tr>
+<tr><td>2</td><td><strong>Đức</strong></td><td>~10,1% thị phần nhập khẩu giày da (2024), tăng ~3% <a href="https://gtaic.ai/files/reports/Japan_640399_472a5eb1-bc5d-4cb3-bcce-c5058906dcf2.pdf" target="_blank" class="citation">[Nguồn]</a>. Nhập khẩu giày ~10,66 tỷ USD <a href="https://www.reportlinker.com/dataset/f38cbecb931b68382499ce23625626ad5cd2d19f" target="_blank" class="citation">[Nguồn]</a>; trung tâm phân phối lớn nhất châu Âu.</td><td>⭐ <strong>Rất cao</strong> — hưởng lợi trực tiếp từ EVFTA (thuế về gần 0%); khách khắt khe nhưng trả giá tốt cho da thật.</td></tr>
+<tr><td>3</td><td><strong>Pháp</strong></td><td>Nhóm nhập khẩu giày da hàng đầu châu Âu; thị trường thời trang lớn.</td><td>⭐ <strong>Cao</strong> — chuộng da thật, thiết kế tinh tế, đặc biệt loafer &amp; giày tây. Lợi thế EVFTA.</td></tr>
+<tr><td>4</td><td><strong>Anh (UK)</strong></td><td>Nhóm nước tiêu thụ &amp; nhập khẩu giày lớn của châu Âu; phụ thuộc mạnh vào nhập khẩu hậu Brexit.</td><td>⭐ <strong>Cao</strong> — chuộng phong cách cổ điển Anh (Oxford/Derby/Brogue), đúng dòng mạnh của Venas. Lưu ý: UK không còn trong EVFTA.</td></tr>
+<tr><td>5</td><td><strong>Nhật Bản</strong></td><td>Thị trường nhập khẩu giày da lớn của châu Á; yêu cầu chất lượng, độ tỉ mỉ và đóng gói rất cao.</td><td>⚠️ <strong>Trung bình–cao</strong> — lợi thế CPTPP; cần chứng minh QC &amp; độ hoàn thiện, giá tốt nếu đạt chuẩn.</td></tr>
+<tr><td>6</td><td><strong>Ý / Tây Ban Nha</strong></td><td>Vừa sản xuất vừa tiêu thụ phân khúc cao cấp; nhập khẩu giày da chất lượng.</td><td>⚠️ <strong>Trung bình</strong> — cạnh tranh trực tiếp với "Made in Italy"; phù hợp nếu đánh vào OEM/thủ công giá cạnh tranh hơn.</td></tr>
+<tr><td>7</td><td><strong>Hà Lan / Bỉ</strong></td><td>Cửa ngõ phân phối EU (cảng Rotterdam, Antwerp); kim ngạch xuất khẩu giày da VN sang Bỉ xếp hạng cao.</td><td>⭐ <strong>Cao</strong> — khách nhập để tái phân phối, thường đặt khối lượng lớn, đúng tệp B2B.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="highlight"><strong>Nhu cầu mới nổi (từ RFQ thực tế trên Alibaba):</strong> Ngoài Mỹ/EU/Nhật, một lượng đáng kể RFQ giày da nam đến từ <strong>Trung Đông (Ả Rập Xê-út)</strong> và <strong>châu Phi (Nigeria, Zambia, Mozambique, Côte d'Ivoire)</strong>. Đặc điểm chung: đặt khối lượng lớn (500–1.000 đôi), yêu cầu mẫu, quan tâm giá bán buôn và custom logo — đây là kênh "mở đơn nhanh" trong khi chờ thâm nhập thị trường Mỹ/EU.</div>
+<p><strong>Tổng kết nhu cầu:</strong> ưu tiên <strong>Hoa Kỳ → EU (Đức/Pháp/Hà Lan) → UK → Nhật Bản</strong> cho dòng cao cấp; dùng <strong>Trung Đông &amp; châu Phi</strong> làm kênh mở đơn nhanh, khối lượng lớn.</p>
+</div>
+
+<!-- ===== CHAPTER 3: SUPPLIER LANDSCAPE ===== -->
+<div class="section-card" id="sec3">
+<h2 class="section-title"><i class="fa-solid fa-warehouse"></i> Chương 3: Bức tranh nhà cung cấp</h2>
+<div class="niche-notice"><strong>⚠️ Lưu ý thị trường ngách:</strong> Ngành giày da nam <strong>từ Việt Nam</strong> có sự hiện diện hạn chế trên Alibaba.com — chỉ một số ít nhà cung cấp Việt Nam đang vận hành store hoạt động và chuyên về da giày. Đa số nhà cung cấp giày da thật trên Alibaba hiện đến từ Trung Quốc và Ấn Độ. Đây là <em>khoảng trống cạnh tranh</em> lớn cho nhà sản xuất Việt Nam như VENASS: ít đối thủ nội địa trực tiếp, nhưng cần đầu tư store &amp; nội dung mạnh để nổi bật.</div>
+
+<h3 class="sub-title">Phần A: Nhà cung cấp từ Việt Nam (thị trường ngách – số lượng hạn chế)</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr><th style="width: 40px;">STT</th><th>Công ty</th><th>Sản phẩm chính</th><th>Doanh thu ước tính</th><th>Số năm trên sàn</th><th style="width: 90px;">Store</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>TUAN HUNG SHOES COMPANY LIMITED (Hồ Chí Minh)</td><td>Giày bệt, cao gót, pumps, sandal, slingback</td><td>US$1M - US$2.5M</td><td>2 năm</td><td><a class="link-store-btn" href="https://thsshoes.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>2</td><td>HA TAY CHEMICAL - WEAVE COMPANY LIMITED (Hà Nội)</td><td>Giày canvas, giày casual, giày nam, giày trẻ em</td><td>US$50M - US$100M</td><td>1 năm</td><td><a class="link-store-btn" href="https://hatayshoes.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>3</td><td>SWINGMELL RETAIL COMPANY LIMITED (Lâm Đồng)</td><td>Giày thể thao, casual, giày da, cao gót, sandal</td><td>US$1M - US$2.5M</td><td>1 năm</td><td><a class="link-store-btn" href="https://vn1575972534jupd.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>4</td><td>HIRESUN INTERNATIONAL INDUSTRY CO., LTD (Hồ Chí Minh)</td><td>Quần áo, sản phẩm nhựa, giày dép, kính, quà tặng</td><td>US$50M - US$100M</td><td>8 năm</td><td><a class="link-store-btn" href="https://hiresunvn.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>5</td><td>CÔNG TY TNHH KD DV TM MINH QU... (Thanh Hóa)</td><td>Giày, đồng hồ, túi, quần áo, thắt lưng</td><td>US$50M - US$100M</td><td>1 năm</td><td><a class="link-store-btn" href="https://vn1354162353ttvo.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>6</td><td>CÔNG TY TNHH VẬN TẢI VƯƠNG CHIẾN (Hòa Bình)</td><td>Giày dép</td><td>US$5M - US$10M</td><td>1 năm</td><td><a class="link-store-btn" href="https://vn1576351413zcsn.trustpass.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub-title">Phần B: Nhà cung cấp hàng đầu trên Alibaba (toàn cầu)</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr><th style="width: 40px;">STT</th><th>Công ty</th><th>Sản phẩm chính</th><th>Doanh thu ước tính</th><th>Số năm trên sàn</th><th style="width: 90px;">Store</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Chongqing Langchi Shoes Co., Ltd. (Trung Quốc)</td><td>Giày da thật, giày dress, leather sneaker</td><td>US$2.5M - US$5M</td><td>6 năm</td><td><a class="link-store-btn" href="https://cqlcxy.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>2</td><td>Guangzhou Weirui Shoes Co., Ltd. (Trung Quốc)</td><td>Giày da thật 100% cao cấp</td><td>US$10M - US$50M</td><td>8 năm</td><td><a class="link-store-btn" href="https://huizumei.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>3</td><td>Huizhou Jianyi Shoes Co., Ltd. (Trung Quốc)</td><td>Giày cao gót, slipper, giày casual, cork mules</td><td>Unavailable</td><td>2 năm</td><td><a class="link-store-btn" href="https://jianyixieye.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>4</td><td>Guangzhou Happybuy Trading Co., Limited (Trung Quốc)</td><td>Giày nam dress, giày casual, boots</td><td>US$10M - US$50M</td><td>2 năm</td><td><a class="link-store-btn" href="https://happygobusiness.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>5</td><td>Guangdong Mingda Shoes Co., Ltd. (Trung Quốc)</td><td>Giày leisure, sandal, giày nữ, giày thể thao</td><td>Above US$100M</td><td>7 năm</td><td><a class="link-store-btn" href="https://gdmingdaxieye.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>6</td><td>Guangzhou Changchun Shoes Co., Ltd. (Trung Quốc)</td><td>Giày nữ, giày trẻ em</td><td>US$1M - US$2.5M</td><td>8 năm</td><td><a class="link-store-btn" href="https://ivyshoes.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>7</td><td>Chengdu Xinziyu Shoes Co., Ltd. (Trung Quốc)</td><td>Boots, sandal, giày cao gót, sneaker</td><td>US$2.5M - US$5M</td><td>8 năm</td><td><a class="link-store-btn" href="https://xingziyu.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>8</td><td>Henan Huaying Shoes Co., Ltd. (Trung Quốc)</td><td>Giày thể thao, casual, giày trẻ em, tennis</td><td>US$10M - US$50M</td><td>12 năm</td><td><a class="link-store-btn" href="https://a3china.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+<tr><td>9</td><td>Guangzhou Crab Trading Co., Ltd. (Trung Quốc)</td><td>Giày học sinh, giày trẻ em, giày da, sneaker</td><td>US$10M - US$50M</td><td>4 năm</td><td><a class="link-store-btn" href="https://crabkids.en.alibaba.com/company_profile.html" target="_blank">Xem Store</a></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.82rem;color:#7B8794;">Dữ liệu nhà cung cấp thu thập từ kết quả tìm kiếm nhà cung cấp trên Alibaba.com (trường "Annual Revenue"). Doanh thu hiển thị trên hồ sơ Alibaba là con số do nhà cung cấp tự khai báo / Alibaba ước tính. Các store Việt Nam chủ yếu là công ty thương mại hoặc sản xuất đa ngành, chưa có nhà máy giày da nam chuyên biệt vận hành store chuyên nghiệp — xác nhận khoảng trống cạnh tranh cho VENASS.</p>
+</div>
+
+<!-- ===== CHAPTER 4: TOP-SELLING PRODUCTS ===== -->
+<div class="section-card" id="sec4">
+<h2 class="section-title"><i class="fa-solid fa-award"></i> Chương 4: Dòng mẫu bán chạy (Sản phẩm bán chạy)</h2>
+<p>Dưới đây là 24 mẫu giày da nam đang được đăng bán &amp; tìm mua nhiều nhất trên Alibaba.com, chia theo <strong>4 nhóm mẫu chủ lực</strong> (Oxford/Derby công sở, Loafer/Slip-on da thật, Business casual, Handmade cao cấp). Danh sách tập trung vào dòng da thật phù hợp năng lực sản xuất của VENASS.</p>
+
+<h3 class="sub-title">Top 10 sản phẩm bán chạy nhất (xếp hạng theo đánh giá &amp; mức độ phổ biến trên Alibaba)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th style="width:40px;">Hạng</th><th style="width:65px;">Ảnh</th><th>Tên sản phẩm</th><th>Nhóm</th><th>Dải giá FOB (USD)</th><th>MOQ</th><th>Nhà cung cấp</th><th>Đánh giá</th><th style="width:110px;">Xem trên Alibaba</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H2f35913220f446a486f15c57706a799ax.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t1"></td><td><strong>Best Selling Men's High Quality Leather Dress Shoes Handmade with Durable</strong></td><td>Handmade</td><td>$3.80 - $4</td><td>1.000 đôi</td><td>Foshan Guozu Shoes Material Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/Best-Selling-Men-s-High-Quality_1600658472221.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>2</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H1132e1fee70942d5a63269e6d581febcj.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t2"></td><td><strong>Men's Full-grain Leather Autumn Business Casual Loafers-Slip-On Shoes</strong></td><td>Loafer</td><td>$30.93 - $35.38</td><td>1 chiếc</td><td>Jiangmen Fanmeng Footwear Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Full-grain-Leather-Autumn_1601925522845.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>3</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/Hfc0ec7e1029d4ec187957ed3e7cb1afbd.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t3"></td><td><strong>OEM ODM Custom logo Men Moccasins Black Retro Cowhide Leather Comfortable</strong></td><td>Loafer</td><td>$33.90 - $43.90</td><td>10 đôi</td><td>Guangzhou Qiao Wa Ni Shoes Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/OEM-ODM-Custom-logo-Men-Moccasins_1601223889080.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>4</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/Hdc606678e1f54b16bf126dd0fd8088c4J.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t4"></td><td><strong>Handmade Washed Horse Leather Derby Shoes for Men Goodyear Welted</strong></td><td>Handmade</td><td>$46.97 - $57.99</td><td>10 đôi</td><td>Guangzhou Beixian Footwear Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/Handmade-Washed-Horse-Leather-Derby-Shoes_1601819972473.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>5</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H72ff967a54b24cb4ba770c0f12337ab3T.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t5"></td><td><strong>New Classic Elegant Handmade Wholecut Oxford Men Leather Dress Shoes</strong></td><td>Handmade</td><td>$114.60 - $140</td><td>2 đôi</td><td>Chongqing Nicewell International Trade Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/New-Classic-Elegant-Handmade-Wholecut-Oxford_1601933448595.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>6</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H5dcd9c45de304cd29a3becb5160d1e949.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t6"></td><td><strong>2024 High Quality Mens Dress Shoes Genuine Leather Party Formal Leather</strong></td><td>Oxford</td><td>$25</td><td>24 đôi</td><td>Urumqi Simonspark International Trade Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/2024-High-Quality-Mens-Dress-Shoes_60814848023.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>7</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/Hb94d76bb4f6c4518a9548bea443f4c9bg.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t7"></td><td><strong>Luxury Italian Stylish Handmade Genuine Leather Mens Oxford Dress Shoes</strong></td><td>Oxford</td><td>$28.50 - $32</td><td>60 đôi</td><td>Foshan City Youwei Trade Co., Ltd</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/Luxury-Italian-Stylish-Handmade-Genuine-Leather_1600484887740.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>8</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H65fe6a5c38394b9bbf1d4aabdd6768eez.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t8"></td><td><strong>Flat Lace up Black Genuine Leather Formal Men Oxford Dress Shoes</strong></td><td>Oxford</td><td>$14</td><td>500 đôi</td><td>Jihua 3513 Industry Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/Flat-Lace-up-Black-Genuine-Leather_60239751939.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>9</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H028fbfae49e04490b28e44b630c85174r.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t9"></td><td><strong>New Men's Leather Shoes Business Casual Men's Style Formal Shoes</strong></td><td>Business casual</td><td>$3.50</td><td>2 đôi</td><td>Pingdingshan Dingxing Department Store Co., Ltd.</td><td>5.0/5</td><td><a href="https://www.alibaba.com/product-detail/New-Men-s-Leather-Shoes-Business_1601840052653.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td><strong>10</strong></td><td><img src="https://s.alicdn.com/@sc04/kf/H0e14210594504d96950fb7c51135931fx.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="t10"></td><td><strong>Men's Casual Leather Shoes Men All-Match Formal Business Shoes Flat</strong></td><td>Business casual</td><td>$8.19</td><td>1 đôi</td><td>Shenzhen Omson Medical Technology Co., Ltd.</td><td>4.2/5</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Casual-Leather-Shoes-Men_1600565265185.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.8rem;color:#7B8794;">Cách xếp hạng: ưu tiên sản phẩm có điểm đánh giá người mua cao (5.0/5), kết hợp mức độ phổ biến của listing và nhu cầu tìm mua theo nhóm. Đây là chỉ số xếp hạng tương đối trên Alibaba.com, không phải số liệu doanh số tuyệt đối.</p>
+
+<h3 class="sub-title">Nhóm 1 — Oxford / Derby công sở (dòng chủ lực, nhu cầu đều quanh năm)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th style="width:40px;">#</th><th style="width:65px;">Ảnh</th><th>Tên sản phẩm</th><th>Dải giá FOB (USD)</th><th>MOQ</th><th>Nhà cung cấp</th><th style="width:80px;">Link</th><th style="width:110px;">Xem trên Alibaba</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><img src="https://s.alicdn.com/@sc04/kf/H81f432ed426b4da092192e84b0174ebaj.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p1"></td><td><strong>Men's Brown Genuine Leather Oxford Dress Shoes Pointed Toe Lace-Up</strong></td><td>$57 - $67</td><td>1 đôi</td><td>Pioneer Timepiece Factory Inc</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Brown-Genuine-Leather-Oxford_1601938339682.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Brown-Genuine-Leather-Oxford_1601938339682.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>2</td><td><img src="https://s.alicdn.com/@sc04/kf/Hb9ba0f18ce7a4f2997f3f9999479a69bZ.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p2"></td><td><strong>Comfortable Casual Fashion Dress Shoes Handmade Men Formal Genuine Leather</strong></td><td>$18 - $28.50</td><td>60 đôi</td><td>Shanghai Wincheer Industrial Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Comfortable-Casual-Fashion-Dress-Shoes-Handmade_62247189749.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Comfortable-Casual-Fashion-Dress-Shoes-Handmade_62247189749.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>3</td><td><img src="https://s.alicdn.com/@sc04/kf/H3fd9f7567309492e841a700f7e54ada3Y.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p3"></td><td><strong>Men's Genuine Calfskin Leather Oxford Dress Shoes Italian Style Lace up</strong></td><td>$40</td><td>1 đôi</td><td>Guangzhou Oulanya Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Genuine-Calfskin-Leather-Oxford_1600754401866.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Genuine-Calfskin-Leather-Oxford_1600754401866.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>4</td><td><img src="https://s.alicdn.com/@sc04/kf/H4288e659e92e411aa73048db992e9e2bO.png_640x640.png" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p4"></td><td><strong>Genuine Leather Men's Business Dress Shoes Oxford Lace-Up British Style</strong></td><td>$25.37</td><td>1 chiếc</td><td>Xiamen Smooth Industry And Trade Co.,ltd</td><td><a href="https://www.alibaba.com/product-detail/Genuine-Leather-Men-s-Business-Dress_1601684544883.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Genuine-Leather-Men-s-Business-Dress_1601684544883.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>5</td><td><img src="https://s.alicdn.com/@sc04/kf/H3da8e34a43014a77a6ab12c9b49618cdT.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p5"></td><td><strong>Luxury British Style Oxford Genuine Leather Men's Lace-up Dress Shoes</strong></td><td>$28.52</td><td>1 đôi</td><td>Guangzhou Kohinoor Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Luxury-British-Style-Oxford-Genuine-Leather_1600431141602.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Luxury-British-Style-Oxford-Genuine-Leather_1600431141602.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>6</td><td><img src="https://s.alicdn.com/@sc04/kf/H6faa1b0e7d2b4c14af081dd29b801e629.png_640x640.png" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p6"></td><td><strong>Men's Black Leather Oxford Dress Shoes Lace Up Business Formal Work</strong></td><td>$6 - $6.90</td><td>20 chiếc</td><td>Jubilee Online Business Limited</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Black-Leather-Oxford-Dress_1601875815122.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Black-Leather-Oxford-Dress_1601875815122.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub-title">Nhóm 2 — Loafer / Slip-on da thật (mạnh ở nhóm khách Âu – Mỹ)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th style="width:40px;">#</th><th style="width:65px;">Ảnh</th><th>Tên sản phẩm</th><th>Dải giá FOB (USD)</th><th>MOQ</th><th>Nhà cung cấp</th><th style="width:80px;">Link</th><th style="width:110px;">Xem trên Alibaba</th></tr></thead>
+<tbody>
+<tr><td>7</td><td><img src="https://s.alicdn.com/@sc04/kf/H646252b6d85c41b2a5a1e6d9eab6d28fP.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p7"></td><td><strong>Senpin 2025 Men Genuine Leather Slip Loafers Soft Rubber Sole Comfortable</strong></td><td>$22.20 - $25.50</td><td>60 đôi</td><td>Guangzhou Senpin Trading Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Senpin-2025-Men-Genuine-Leather-Slip_1601444281650.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Senpin-2025-Men-Genuine-Leather-Slip_1601444281650.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>8</td><td><img src="https://s.alicdn.com/@sc04/kf/H69810760de754e889b688c84ff4ecd96l.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p8"></td><td><strong>Men's Classy Comfortable Handmade Genuine Leather Slip-On Loafer Shoes</strong></td><td>$40</td><td>15 đôi</td><td>Guangzhou Oulanya Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Classy-Comfortable-Handmade-Genuine_1601263387107.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Classy-Comfortable-Handmade-Genuine_1601263387107.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>9</td><td><img src="https://s.alicdn.com/@sc04/kf/Hd8664879badc443bb5f7e5431132cfdb3.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p9"></td><td><strong>Italian High Quality Leather Black Casual Loafers Shoes for Men Slip-On</strong></td><td>$26</td><td>2 đôi</td><td>Quanzhou Baoning Import And Export Trade Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Italian-High-Quality-Leather-Black-Casual_1600828065247.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Italian-High-Quality-Leather-Black-Casual_1600828065247.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>10</td><td><img src="https://s.alicdn.com/@sc04/kf/Hfc0ec7e1029d4ec187957ed3e7cb1afbd.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p10"></td><td><strong>OEM ODM Custom logo Men Moccasins Black Retro Cowhide Leather Comfortable</strong></td><td>$33.90 - $43.90</td><td>10 đôi</td><td>Guangzhou Qiao Wa Ni Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/OEM-ODM-Custom-logo-Men-Moccasins_1601223889080.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/OEM-ODM-Custom-logo-Men-Moccasins_1601223889080.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>11</td><td><img src="https://s.alicdn.com/@sc04/kf/H15722e4776714a3e87da3d8330ba31f8Z.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p11"></td><td><strong>Wholesale Price Elegant Men Loafer Shoes High Quality Genuine Leather</strong></td><td>$42.90</td><td>50 đôi</td><td>Foshan Chengyin Trade Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Wholesale-Price-Elegant-Men-Loafer-Shoes_1601729049030.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Wholesale-Price-Elegant-Men-Loafer-Shoes_1601729049030.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>12</td><td><img src="https://s.alicdn.com/@sc04/kf/Hb8a00eda2bb64525b9f74b9d9e9c0776E.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p12"></td><td><strong>Choozii Customize New Fashion Black Slip on Men's Smooth Leather Loafers</strong></td><td>$23.99 - $26.99</td><td>100 đôi</td><td>Choozii Guangzhou International Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Choozii-Customize-New-Fashion-Black-Slip_1600601794811.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Choozii-Customize-New-Fashion-Black-Slip_1600601794811.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub-title">Nhóm 3 — Business casual (hợp xu hướng làm việc linh hoạt)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th style="width:40px;">#</th><th style="width:65px;">Ảnh</th><th>Tên sản phẩm</th><th>Dải giá FOB (USD)</th><th>MOQ</th><th>Nhà cung cấp</th><th style="width:80px;">Link</th><th style="width:110px;">Xem trên Alibaba</th></tr></thead>
+<tbody>
+<tr><td>13</td><td><img src="https://s.alicdn.com/@sc04/kf/Hc535d4d36c604c98afa59fd1e3bfc2b3z.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p13"></td><td><strong>Men's Leather Formal Business Casual Office Shoes Security Uniform</strong></td><td>$25</td><td>100 đôi</td><td>Jiangxi Province Dongpeng Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Leather-Formal-Business-Casual_1600553762190.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Leather-Formal-Business-Casual_1600553762190.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>14</td><td><img src="https://s.alicdn.com/@sc04/kf/Hcd8b7d31cc3f4f959a97c7c53343910ad.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p14"></td><td><strong>Men's Shoes Italian Stylish Leather Business Office Shoes Anti-Slip</strong></td><td>$15.60</td><td>1 đôi</td><td>Quanzhou Baoning Import And Export Trade Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Shoes-Italian-Stylish-Leather_1600229599563.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Shoes-Italian-Stylish-Leather_1600229599563.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>15</td><td><img src="https://s.alicdn.com/@sc04/kf/H5ea3cf41f90a494b8b52f5b4580c277cj.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p15"></td><td><strong>Genuine Men's Leather Shoes Office Casual Customized Business</strong></td><td>$43</td><td>15 đôi</td><td>Guangzhou Oulanya Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Genuine-Men-s-Leather-Shoes-Office_1600308200988.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Genuine-Men-s-Leather-Shoes-Office_1600308200988.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>16</td><td><img src="https://s.alicdn.com/@sc04/kf/HTB1_6MKgv6H8KJjSspmq6z2WXXaK.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p16"></td><td><strong>Factory Direct Shoes Classic Leather Men Business Office Sneaker Loafers</strong></td><td>$5.50 - $8.60</td><td>60 đôi</td><td>Quanzhou Zhongyu Footwear Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Factory-Direct-Shoes-Classic-Leather-Men_60717823905.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Factory-Direct-Shoes-Classic-Leather-Men_60717823905.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>17</td><td><img src="https://s.alicdn.com/@sc04/kf/He05759a6ad0f46e7a37d66e82723094dY.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p17"></td><td><strong>Custom Business Office Men's Casual Style Leather Oxford Dress Shoes</strong></td><td>$28.50</td><td>30 đôi</td><td>Shanghai Wincheer Industrial Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Custom-Business-Office-Men-s-Casual_1600238191380.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Custom-Business-Office-Men-s-Casual_1600238191380.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>18</td><td><img src="https://s.alicdn.com/@sc04/kf/Hb20c4c7dc505401798b397ee381492baq.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p18"></td><td><strong>Genuine Cow Leather Men's Business Casual Shoes Lightweight Comfortable</strong></td><td>$23.47 - $24.21</td><td>300 đôi</td><td>Wenzhou Onelay International Trade Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Genuine-Cow-Leather-Men-s-Business_1601908688206.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Genuine-Cow-Leather-Men-s-Business_1601908688206.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="sub-title">Nhóm 4 — Handmade cao cấp (custom, Goodyear welt / Blake stitch)</h3>
+<div class="table-container">
+<table>
+<thead><tr><th style="width:40px;">#</th><th style="width:65px;">Ảnh</th><th>Tên sản phẩm</th><th>Dải giá FOB (USD)</th><th>MOQ</th><th>Nhà cung cấp</th><th style="width:80px;">Link</th><th style="width:110px;">Xem trên Alibaba</th></tr></thead>
+<tbody>
+<tr><td>19</td><td><img src="https://s.alicdn.com/@sc04/kf/Hed453a3693994962bd1394ae406bf293D.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p19"></td><td><strong>Exquisite Workmanship Mens Dress Shoes Oxford Pure Leather Men Brown</strong></td><td>$135 - $149</td><td>1 đôi</td><td>Shanghai Tianzi Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Exquisite-Workmanship-Mens-Dress-Shoes-Oxford_1600307615937.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Exquisite-Workmanship-Mens-Dress-Shoes-Oxford_1600307615937.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>20</td><td><img src="https://s.alicdn.com/@sc04/kf/H6f491cc3ffd649d7aafa0ccc0bed17e56.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p20"></td><td><strong>Original Comfort Office Man Shoes Leather Luxury Hand Made Goodyear Welted</strong></td><td>$75.90</td><td>100 đôi</td><td>Foshan Chengyin Trade Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Original-Comfort-Office-Man-Shoes-Leather_1600773333116.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Original-Comfort-Office-Man-Shoes-Leather_1600773333116.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>21</td><td><img src="https://s.alicdn.com/@sc04/kf/Hdea6085a134d48719bca62c0af5a52b5t.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p21"></td><td><strong>Handmade Custom Design Goodyear Welted Leather Wedding Shoes</strong></td><td>$50 - $56</td><td>24 đôi</td><td>K.S.S. SHOE INDUSTRY</td><td><a href="https://www.alibaba.com/product-detail/Handmade-Custom-Design-Goodyear-Welted-Leather_10000000220457.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Handmade-Custom-Design-Goodyear-Welted-Leather_10000000220457.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>22</td><td><img src="https://s.alicdn.com/@sc04/kf/Hc48a96c6d3d14dc584ebb73547d7c591u.png_640x640.png" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p22"></td><td><strong>Men's Retro Derby Dress Shoes Handmade Goodyear-Waxed Casual Leather</strong></td><td>$147 - $192.40</td><td>10 đôi</td><td>Jinjiang Moroso E-commerce Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/Men-s-Retro-Derby-Dress-Shoes_1601164127937.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/Men-s-Retro-Derby-Dress-Shoes_1601164127937.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>23</td><td><img src="https://s.alicdn.com/@sc04/kf/H7be1cf16541b49a18f965ee52290a2ace.jpg_640x640.jpg" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p23"></td><td><strong>OEM Custom Men's Genuine Leather Horsehide Goodyear Welt Lace-up Oxford</strong></td><td>$53.90 - $59.80</td><td>100 đôi</td><td>Guangzhou Qiao Wa Ni Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/OEM-Custom-Men-s-Genuine-Leather_1601098608708.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/OEM-Custom-Men-s-Genuine-Leather_1601098608708.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+<tr><td>24</td><td><img src="https://s.alicdn.com/@kc04/kf/H4f1aeebd27e44fa794703de8d26ea0dcI.jpg_640x640.jpg" onerror="this.src='https://s.alicdn.com/@sc04/kf/H4f1aeebd27e44fa794703de8d26ea0dcI.jpg_640x640.jpg'" style="border-radius:4px;object-fit:cover;width:60px;height:60px;" alt="p24"></td><td><strong>New Classic Elegant Handmade Wholecut Oxford Men Leather Dress Shoes</strong></td><td>$70</td><td>2 đôi</td><td>Yangjiang Hengxin Shoes Co., Ltd.</td><td><a href="https://www.alibaba.com/product-detail/New-Classic-Elegant-Handmade-Wholecut-Oxford_1601062561220.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td><td><a href="https://www.alibaba.com/product-detail/New-Classic-Elegant-Handmade-Wholecut-Oxford_1601062561220.html" target="_blank" class="link-store-btn">View on Alibaba</a></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.82rem;color:#7B8794;">Ghi chú: Tất cả sản phẩm, ảnh, giá FOB, MOQ và link đều lấy trực tiếp từ các listing đang hoạt động trên Alibaba.com. Giá FOB hiển thị là dải giá niêm yết của nhà cung cấp, có thể thay đổi theo số lượng đặt hàng và Incoterms.</p>
+
+<h3 class="sub-title">Đối chiếu danh mục sản phẩm Venas với 4 nhóm mẫu bán chạy</h3>
+<p>Website Venas (mục "Giày dép nam") có khoảng 18–20 mẫu giày nam. Đối chiếu trực tiếp với 4 nhóm mẫu bán chạy nhất trên Alibaba:</p>
+<div class="table-container">
+<table>
+<thead><tr><th>Nhóm mẫu bán chạy</th><th>Venas đã có?</th><th>Mẫu cụ thể trên website Venas</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Oxford / Derby công sở</strong></td><td>✅ Có — rất mạnh</td><td>Giày tây nam dáng Oxford; ER10, ER11, ER12; giày tây nam da cao cấp; giày công sở nam da bò cao cấp; giày tây nam kiểu dáng trung niên.</td></tr>
+<tr><td><strong>2. Loafer / Slip-on da thật</strong></td><td>✅ Có — mạnh nhất</td><td>Giày mọi nam da bò cao cấp (ER13); giày lười nam da bò cao cấp (ER14); giày lười nam công sở da bò; giày lười nam da bò nguyên tấm; giày lười da nam đế cao su; giày loafer nam da bò cao cấp; giày mọi nam màu vàng bò…</td></tr>
+<tr><td><strong>3. Business casual</strong></td><td>⚠️ Có một phần</td><td>Giày lười nam công sở da bò; giày công sở nam da bò cao cấp (thiên về công sở, chưa có dòng casual/driver riêng).</td></tr>
+<tr><td><strong>4. Handmade cao cấp (Goodyear / Blake)</strong></td><td>❌ Chưa có dòng riêng</td><td>Website dùng "da bò cao cấp" nhưng chưa định vị hoặc truyền thông dòng khâu tay Goodyear/Blake — đây là khoảng trống lớn nhất.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="chart-box wide"><canvas id="venasCoverageChart" width="700" height="350"></canvas></div>
+<p style="font-size:0.8rem;color:#7B8794;">Biểu đồ thể hiện số mẫu giày nam Venas đang có theo từng nhóm mẫu bán chạy. Cột xanh = nhóm Venas đã mạnh; cột vàng = nhóm còn mỏng; cột đỏ = nhóm còn trống (cơ hội lớn nhất).</p>
+<div class="highlight"><strong>Kết luận nhanh:</strong> Venas đã <strong>sẵn sàng</strong> cho Nhóm 1 &amp; 2 (dòng mạnh, nhiều mẫu mã). Nhóm 3 cần bổ sung hoặc tách dòng "business casual". Nhóm 4 (Handmade cao cấp) còn trống — cơ hội định vị cao cấp, biên lợi nhuận cao, ít cạnh tranh. Ngoài giày nam, Venas còn có giày cao gót / sandal / dép nữ và giày dép trẻ em — có thể mở rộng danh mục trên Alibaba sau khi đã ổn định dòng nam.</div>
+</div>
+
+<!-- ===== CHAPTER 5: BUYER RFQ REQUESTS ===== -->
+<div class="section-card" id="sec5">
+<h2 class="section-title"><i class="fa-solid fa-clipboard-list"></i> Chương 5: Yêu cầu báo giá (RFQ) của người mua</h2>
+<p>Các RFQ (Request for Quotation) thực tế đang mở trên Alibaba.com liên quan tới giày da nam. Đây là tín hiệu nhu cầu mua trực tiếp và là kênh chào giá chủ động mà seller Việt Nam nên khai thác. Lưu ý: nhu cầu mua mẫu giày da nam tập trung ở <strong>Hoa Kỳ, châu Âu, châu Phi và Trung Đông</strong>.</p>
+<div class="rfq-grid">
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H3da8e34a43014a77a6ab12c9b49618cdT.jpg_640x640.jpg" alt="RFQ 1"/>
+<div class="rfq-title">Custom Branded Men's Leather Oxford Shoes (Brogue)</div>
+<div class="rfq-meta">📍 Nigeria · 500 đôi · Đối tác sản xuất dài hạn</div>
+<p class="rfq-desc">Người mua đang tìm nhà sản xuất uy tín để hợp tác sản xuất dài hạn. Yêu cầu: giày Oxford nam có họa tiết brogue tinh tế, da thật, thương hiệu riêng (custom logo). Khối lượng lớn và cam kết đơn lặp lại — phù hợp năng lực OEM của nhà máy Việt Nam.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/Hb9ba0f18ce7a4f2997f3f9999479a69bZ.jpg_640x640.jpg" alt="RFQ 2"/>
+<div class="rfq-title">High Quality Men Leather Shoes — Commercial Grade (Sample Required)</div>
+<div class="rfq-meta">📍 Saudi Arabia · 1.000 đôi · Yêu cầu mẫu + nhà máy trực tiếp</div>
+<p class="rfq-desc">Người mua Trung Đông tìm nhà sản xuất trực tiếp cung cấp giày da nam chất lượng cao cho mục đích thương mại. Yêu cầu gửi mẫu trước, quan tâm độ bền &amp; giá bán buôn cạnh tranh. Đây là khách hàng tiềm năng cho dòng Oxford/Business casual.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H4288e659e92e411aa73048db992e9e2bO.png_640x640.png" alt="RFQ 3"/>
+<div class="rfq-title">Men's Leather Dress Shoes — Classic Oxford, Italian Style</div>
+<div class="rfq-meta">📍 Zambia · 100 đôi · Đế cao su, lót da thật</div>
+<p class="rfq-desc">Nhu cầu giày Oxford công sở cổ điển phong cách Ý, dùng cho Office &amp; Career, phù hợp quanh năm. Yêu cầu đế ngoài cao su, lót/midsole da thật. Khối lượng đơn vừa, thích hợp để thử đơn và mở rộng quan hệ.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H0bb912fcdca741f3bf869f2773bb52bey.jpg_640x640.jpg" alt="RFQ 4"/>
+<div class="rfq-title">Top Brand Office Dress Shoes — Men Leather Velvet Loafers</div>
+<div class="rfq-meta">📍 Tajikistan · 6 đôi · Custom logo, size 7–13</div>
+<p class="rfq-desc">Tìm loafer da nam thời trang cho công sở, chất liệu velvet/da sang trọng, chấp nhận in logo riêng, dải size 7–13. Đây là đơn nhỏ (đơn mẫu/thử) nhưng đại diện nhóm khách boutique muốn thử nguồn hàng mới.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/Hc48a96c6d3d14dc584ebb73547d7c591u.png_640x640.png" alt="RFQ 5"/>
+<div class="rfq-title">2026 New Bespoke Leather Men's Dress Shoes for Party — Waterproof &amp; Breathable</div>
+<div class="rfq-meta">📍 Hoa Kỳ · Đơn mẫu · Họa tiết plaid</div>
+<p class="rfq-desc">Khách Mỹ quan tâm giày dress bespoke cho party/sự kiện, yêu cầu chống thấm nước, thoáng khí, họa tiết kẻ sọc (plaid), lót da thật, đế da bò/Oxford. Nhóm khách thương hiệu thời trang đang phát triển dòng sản phẩm mới.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H5ea3cf41f90a494b8b52f5b4580c277cj.jpg_640x640.jpg" alt="RFQ 6"/>
+<div class="rfq-title">Solid Luxury Men's Brown Leather Double Buckle Monk Formal Shoes</div>
+<div class="rfq-meta">📍 Italy · Đơn mẫu · Đế cao su</div>
+<p class="rfq-desc">Khách Ý tìm giày monk-strap khóa kép da bò nâu, phong cách công sở/lịch lãm, đế cao su. Thị trường Ý khó tính về chất lượng da &amp; đường may — cơ hội định vị phân khúc cao cấp nếu nhà máy đáp ứng được.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H15722e4776714a3e87da3d8330ba31f8Z.jpg_640x640.jpg" alt="RFQ 7"/>
+<div class="rfq-title">Tassel Loafer Shoes — Men's Leather Dress Shoes &amp; Oxfords</div>
+<div class="rfq-meta">📍 Mozambique · Loafer công sở · Phong cách business</div>
+<p class="rfq-desc">Nhu cầu loafer có tua rua (tassel loafer) da nam, phục vụ dòng giày công sở/thương mại tại thị trường châu Phi. Đây là phân khúc giá trung bình, khối lượng tiềm năng tăng theo mùa.</p>
+</div>
+<div class="rfq-card">
+<img class="rfq-img" src="https://s.alicdn.com/@sc04/kf/H0d05a665ebf04e60b415d08285a089adi.jpg_640x640.jpg" alt="RFQ 8"/>
+<div class="rfq-title">High Quality Men's Leather Shoes — Custom Color &amp; Logo</div>
+<div class="rfq-meta">📍 Côte d'Ivoire · 20 đôi · Custom màu + logo</div>
+<p class="rfq-desc">Khách yêu cầu giày da nam thiết kế thanh lịch, thoải mái, bền, chấp nhận tùy chỉnh màu sắc và logo. Đơn khởi điểm nhỏ nhưng mở ra cơ hội OEM/private label cho thị trường Tây Phi đang tăng trưởng.</p>
+</div>
+</div>
+<p style="font-size:0.8rem;color:#7B8794;margin-top:1.2rem;">Nguồn: <a href="https://sourcing.alibaba.com/rfq/rfq_search_list.htm?searchText=leather+shoes" target="_blank" class="citation">Alibaba.com – RFQ Search "leather shoes" (521 yêu cầu đang mở)</a>. Ảnh minh họa lấy từ các listing giày da nam tiêu biểu trên Alibaba CDN.</p>
+</div>
+
+<!-- ===== CHAPTER 6: BUYER PERSONAS & IMAGE ANALYSIS ===== -->
+<div class="section-card" id="sec6">
+<h2 class="section-title"><i class="fa-solid fa-magnifying-glass"></i> Chương 6: Chân dung người mua &amp; Phân tích hình ảnh</h2>
+<h3 class="sub-title">Chân dung người mua (Buyer Personas)</h3>
+<div class="persona-grid">
+<div class="persona-card"><h4>Nhà phân phối / Bán buôn (Wholesale Distributor)</h4><ul><li>Thị trường chính: châu Phi, Trung Đông, Đông Nam Á</li><li>Quan tâm hàng đầu: giá bán buôn, MOQ linh hoạt, độ bền</li><li>Đặt khối lượng lớn (500–1.000 đôi), ưu tiên đơn lặp lại</li><li>Thường yêu cầu mẫu trước khi ký đơn</li><li>Chuộng dòng Oxford &amp; Loafer da thật, giá trung bình</li></ul></div>
+<div class="persona-card"><h4>Thương hiệu OEM/ODM &amp; Private Label</h4><ul><li>Thị trường: châu Âu, Bắc Mỹ, Nhật Bản</li><li>Đề cao năng lực OEM/ODM, custom logo, mẫu mã riêng</li><li>Yêu cầu chất lượng da, đường may, chứng nhận &amp; độ hoàn thiện cao</li><li>Đơn giá cao hơn nhưng khắt khe về kiểm định (QC)</li><li>Mục tiêu: dòng Handmade/Goodyear và Business casual</li></ul></div>
+<div class="persona-card"><h4>Nhà bán lẻ / Boutique &amp; Chủ shop</h4><ul><li>Thị trường: nội địa Việt Nam &amp; khu vực</li><li>Mua số lượng nhỏ, đa dạng mẫu mã, cập nhật xu hướng nhanh</li><li>Ưu tiên mẫu mới liên tục, tồn kho thấp</li><li>Nhạy cảm với phong cách &amp; thị hiếu thời trang</li><li>Phù hợp dòng Business casual và Loafer thời trang</li></ul></div>
+</div>
+<h3 class="sub-title">Phân tích hình ảnh sản phẩm (Product Image Analysis)</h3>
+<div class="grid-2">
+<div class="info-card"><img src="https://s.alicdn.com/@sc04/kf/H81f432ed426b4da092192e84b0174ebaj.jpg_640x640.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;" alt="analysis1"/><p style="font-size:0.85rem;"><strong>Formal Oxford da bò (đối thủ TQ/Ấn):</strong> Ảnh dùng nền trắng sạch, ánh sáng đều, làm nổi rõ da bóng và mũi nhọn. Bố cục chuẩn e-commerce, tạo cảm giác cao cấp. <em>Gợi ý cho VENASS:</em> nên chụp nền trắng + ảnh cận phom dáng và đường may Goodyear để thể hiện tay nghề thủ công — điểm bán khác biệt so với hàng PU giá rẻ.</p></div>
+<div class="info-card"><img src="https://s.alicdn.com/@sc04/kf/H69810760de754e889b688c84ff4ecd96l.jpg" onerror="this.src='https://s.alicdn.com/@sc04/kf/H69810760de754e889b688c84ff4ecd96l.jpg_640x640.jpg'" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;" alt="analysis2"/><p style="font-size:0.85rem;"><strong>Loafer/Slip-on da thật:</strong> Ảnh thể hiện chất liệu da mềm, form gọn, sang trọng — rất hợp gu khách Âu–Mỹ. Tuy nhiên bối cảnh còn đơn giản. <em>Gợi ý:</em> thêm ảnh lifestyle (đặt trên nền gỗ/đá, có mẫu chân mang thử) để tăng cảm nhận thực tế và tỷ lệ chuyển đổi.</p></div>
+<div class="info-card"><img src="https://s.alicdn.com/@sc04/kf/Hc535d4d36c604c98afa59fd1e3bfc2b3z.jpg_640x640.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;" alt="analysis3"/><p style="font-size:0.85rem;"><strong>Business casual:</strong> Ảnh cho thấy sản phẩm nhẹ, thoáng, phù hợp làm việc linh hoạt — nhóm đang tăng trưởng mạnh. <em>Gợi ý:</em> nên làm bộ ảnh đa góc (trên, cạnh, đế) và bảng size rõ ràng vì khách B2B luôn kiểm tra thông số trước khi hỏi giá.</p></div>
+<div class="info-card"><img src="https://s.alicdn.com/@sc04/kf/H6f491cc3ffd649d7aafa0ccc0bed17e56.jpg" onerror="this.src='https://s.alicdn.com/@sc04/kf/H6f491cc3ffd649d7aafa0ccc0bed17e56.jpg_640x640.jpg'" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;" alt="analysis4"/><p style="font-size:0.85rem;"><strong>Handmade Goodyear welted:</strong> Ảnh nhấn vào công đoạn may tay và đế Goodyear — tạo giá trị "craftsmanship", ít cạnh tranh, biên lợi nhuận cao. <em>Gợi ý:</em> quay video ngắn quy trình khâu đế Goodyear/Blake stitch để đăng kèm listing — yếu tố tăng độ tin cậy mạnh với khách cao cấp.</p></div>
+</div>
+</div>
+
+<!-- ===== CHAPTER 7: PRICING INTELLIGENCE ===== -->
+<div class="section-card" id="sec7">
+<h2 class="section-title"><i class="fa-solid fa-tags"></i> Chương 7: Phân tích giá bán</h2>
+<div class="pricing-grid">
+<div class="chart-box"><canvas id="priceChart" width="700" height="350"></canvas></div>
+<div class="potential-box">
+<h4><i class="fa-solid fa-star"></i> Dư địa thị trường &amp; định giá</h4>
+<p>Giá giày da nam trên Alibaba phân hóa rất rộng. Hàng PU giá rẻ ($1,25–$25) do Trung Quốc thống trị — <strong>không nên đua giá</strong> ở đây. Dòng da thật &amp; thủ công ($24–$321) mới là sân chơi phù hợp: ít cạnh tranh hơn, khách Âu–Mỹ sẵn sàng trả giá cao nếu chứng minh được tay nghề và chất liệu. VENASS nên định vị <strong>$35–$120/đôi</strong> cho Oxford/Loafer da thật và <strong>$70–$180/đôi</strong> cho dòng Handmade Goodyear để tối ưu biên lợi nhuận.</p>
+</div>
+</div>
+<h3 class="sub-title">Dải giá theo nhóm sản phẩm phụ</h3>
+<div class="table-container">
+<table>
+<thead><tr><th>Nhóm sản phẩm</th><th>Dải giá FOB</th><th>MOQ phổ biến</th><th>Nhận định cho seller</th></tr></thead>
+<tbody>
+<tr><td>Oxford / Derby công sở</td><td>$6 – $149 / đôi</td><td>1 – 100 đôi</td><td>Biên giá rộng do phân hóa da thật vs PU. Dòng da bò kiểu Ý bán $40–149 <a href="https://www.alibaba.com/product-detail/Men-s-Genuine-Calfskin-Leather-Oxford_1600754401866.html" target="_blank" class="citation">[Giá]</a></td></tr>
+<tr><td>Loafer / Slip-on da thật</td><td>$5.85 – $129 / đôi</td><td>2 – 60 đôi</td><td>Mạnh ở khách Âu–Mỹ; cấu hình da mềm + đế cao su là phổ biến nhất <a href="https://www.alibaba.com/product-detail/Senpin-2025-Men-Genuine-Leather-Slip_1601444281650.html" target="_blank" class="citation">[Giá]</a></td></tr>
+<tr><td>Business casual</td><td>$1.25 – $64 / đôi</td><td>2 – 300 đôi</td><td>Cạnh tranh giá gắt nhất; nên định vị da thật/custom để thoát khỏi cuộc đua giá <a href="https://www.alibaba.com/product-detail/Genuine-Cow-Leather-Men-s-Business_1601908688206.html" target="_blank" class="citation">[Giá]</a></td></tr>
+<tr><td>Handmade cao cấp (Goodyear / Blake)</td><td>$24 – $321 / đôi</td><td>1 – 100 đôi</td><td>Giá trị cao, ít cạnh tranh; khách đặt theo mẫu, quan tâm tay nghề &amp; vật liệu <a href="https://www.alibaba.com/product-detail/Exquisite-Workmanship-Mens-Dress-Shoes-Oxford_1600307615937.html" target="_blank" class="citation">[Giá]</a></td></tr>
+<tr><td>Giày nam PU / giá rẻ (tham chiếu)</td><td>$3.80 – $25 / đôi</td><td>2 – 1.000 đôi</td><td>Trung Quốc chi phối; không nên cạnh tranh trực tiếp ở phân khúc này <a href="https://www.alibaba.com/product-detail/Men-s-Black-Leather-Oxford-Dress_1601875815122.html" target="_blank" class="citation">[Giá]</a></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.82rem;color:#7B8794;">Nguồn giá: tổng hợp từ giá FOB niêm yết của các listing giày da nam đang hoạt động trên Alibaba.com (truy cập 05/10/2026). Giá chưa gồm vận chuyển; Incoterms phần lớn là FOB. MOQ hiển thị theo đơn vị gốc của từng listing và có thể thương lượng.</p>
+</div>
+
+<!-- ===== CHAPTER 8: STRATEGY & RESEARCH NOTES ===== -->
+<div class="section-card" id="sec8">
+<h2 class="section-title"><i class="fa-solid fa-rocket"></i> Chương 8: Chiến lược &amp; Ghi chú nghiên cứu</h2>
+<p>Với lợi thế "Vietnam made", năng lực sản xuất da thật và vị trí top 2 xuất khẩu toàn cầu, VENASS có thể biến Alibaba.com thành kênh xuất khẩu trực tiếp, thoát khỏi vai trò gia công giá rẻ. Dưới đây là 6 định hướng chiến lược trọng tâm để đưa dòng giày da nam lên sàn và thu hút khách quốc tế.</p>
+<div class="strategy-grid">
+<div class="strategy-card"><span class="strategy-no">01</span><h4>Định vị "da thật &amp; thủ công Việt Nam"</h4><p>Nhấn mạnh da bò thật, khâu tay Goodyear/Blake và tỷ lệ lao động khéo léo — lá chắn khác biệt trước hàng PU giá rẻ của Trung Quốc. Xây câu chuyện thương hiệu "handcrafted in Vietnam".</p></div>
+<div class="strategy-card"><span class="strategy-no">02</span><h4>Store &amp; listing chuyên nghiệp</h4><p>Mở store riêng với ảnh nền trắng chuẩn e-commerce, video quy trình khâu đế, bảng size quốc tế (EU/US/UK) và thông số da đầy đủ. Đây là điểm yếu lớn nhất của các nhà cung cấp Việt hiện có.</p></div>
+<div class="strategy-card"><span class="strategy-no">03</span><h4>Khai thác RFQ chủ động mỗi ngày</h4><p>Chủ động trả lời RFQ giày da nam ở US, EU, châu Phi, Trung Đông; gửi mẫu nhanh để giành đơn trước đối thủ. RFQ hiện có tới 521 yêu cầu đang mở cho từ khóa "leather shoes".</p></div>
+<div class="strategy-card"><span class="strategy-no">04</span><h4>Tập trung 4 dòng bán chạy</h4><p>Ưu tiên Oxford/Derby, Loafer/Slip-on, Business casual và Handmade custom — đúng 4 nhóm đang có nhu cầu đều quanh năm, tránh dàn trải mẫu mã.</p></div>
+<div class="strategy-card"><span class="strategy-no">05</span><h4>Tận dụng lợi thế thuế quan</h4><p>Định vị thị trường EU/UK/Nhật nhờ ưu đãi EVFTA &amp; CPTPP; truyền thông "Vietnam tax advantage" như điểm cộng chi phí cho nhà nhập khẩu.</p></div>
+<div class="strategy-card"><span class="strategy-no">06</span><h4>Xây niềm tin B2B</h4><p>Đăng ký Verified Supplier, dùng Trade Assurance, cam kết mẫu nhanh &amp; lead time ổn định. Kim ngạch xuất khẩu giày VN sang Mỹ đạt ~8,3 tỷ USD là bằng chứng năng lực cho khách phương Tây.</p></div>
+</div>
+<h3 class="sub-title">Vì sao Venas nên bán trên Alibaba.com</h3>
+<p>Năng lực sản xuất của Venas (1.000 nhân viên, 5 nhà xưởng, 10.000 m², hàng triệu đôi/năm) vượt xa nhu cầu bán sỉ nội địa. Alibaba.com là cánh cửa xuất khẩu trực tiếp phù hợp nhất để biến năng lực đó thành đơn hàng quốc tế.</p>
+<h4 style="color:var(--p);margin:0 0 0.6rem 0;font-size:1rem;">Vì sao cần làm ngay</h4>
+<ul style="list-style:none;padding-left:0;font-size:0.88rem;line-height:1.7;color:#576574;">
+<li style="margin-bottom:0.6rem;"><strong>① Năng lực dư, kênh bán hẹp.</strong> Hiện chỉ bán sỉ nội địa nên dễ bị ép giá và khó lấp đầy công suất. Xuất khẩu trực tiếp giúp tăng giá trị đơn hàng và biên lợi nhuận.</li>
+<li style="margin-bottom:0.6rem;"><strong>② Khoảng trống cạnh tranh.</strong> Việt Nam là nhà máy giày số 2 thế giới, nhưng rất ít nhà cung cấp giày da nam Việt hiện diện chuyên nghiệp trên Alibaba — ai lên trước, người đó chiếm vị thế tiên phong và khách OEM/ODM.</li>
+<li style="margin-bottom:0.6rem;"><strong>③ Rủi ro nếu không làm.</strong> Khách quốc tế tìm nguồn giày da thật chủ yếu qua Alibaba; nếu Venas vắng mặt, những khách này sẽ rơi vào tay đối thủ Trung Quốc/Ấn Độ. Càng chậm, chi phí giành lại thị phần càng cao.</li>
+<li style="margin-bottom:0.6rem;"><strong>④ Làn sóng China+1.</strong> Nhu cầu đa dạng hóa nguồn cung đang tăng, giúp "Vietnam made" trở thành lựa chọn thay thế hấp dẫn cho các brand đang tìm nhà máy ngoài Trung Quốc.</li>
+</ul>
+<h4 style="color:var(--p);margin:1.2rem 0 0.6rem 0;font-size:1rem;">Vì sao Alibaba phù hợp với Venas</h4>
+<div class="table-container">
+<table>
+<thead><tr><th>Lý do</th><th>Vì sao khớp với Venas</th></tr></thead>
+<tbody>
+<tr><td>Đúng tệp khách B2B</td><td>Alibaba là sàn B2B — người mua là nhà phân phối, nhà bán buôn, brand OEM/ODM; đúng mô hình nhà máy của Venas (không phải bán lẻ từng đôi).</td></tr>
+<tr><td>Phù hợp OEM/ODM &amp; MOQ lớn</td><td>Venas sản xuất hàng triệu đôi/năm — hợp với đơn hàng khối lượng lớn thay vì bán lẻ.</td></tr>
+<tr><td>Công cụ RFQ tạo đơn chủ động</td><td>Có hơn 500 RFQ "leather shoes" đang mở; Venas có thể chủ động chào giá và giành đơn thay vì ngồi chờ.</td></tr>
+<tr><td>Thể hiện được "nhà máy thật"</td><td>Venas là nhà sản xuất, không phải trader. Badge Verified Supplier + Trade Assurance tạo niềm tin — lợi thế trước các công ty thương mại.</td></tr>
+<tr><td>Tận dụng lợi thế thuế quan</td><td>"Vietnam made" + ưu đãi EVFTA (EU), CPTPP (Nhật) là điểm cộng chi phí trực tiếp cho nhà nhập khẩu — hiển thị ngay trên store.</td></tr>
+<tr><td>Chi phí tiếp cận thấp hơn hội chợ</td><td>Tiếp cận buyer toàn cầu với chi phí hằng năm thấp hơn nhiều so với thuê gian hàng hội chợ quốc tế.</td></tr>
+<tr><td>Hệ sinh thái đầy đủ</td><td>Trade Assurance (thanh toán bảo vệ), logistics, nguồn hàng — giảm rào cản cho lần xuất khẩu đầu tiên.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="highlight strategy-highlight">
+<strong>Kết luận:</strong> Thị trường giày da nam toàn cầu đang tăng trưởng ổn định ($195,2 tỷ → $247,5 tỷ vào 2030), với nhu cầu tập trung ở Hoa Kỳ, EU, Anh và Nhật Bản, cùng làn sóng dịch chuyển đơn hàng ra khỏi Trung Quốc. Bốn nhóm mẫu bán chạy — Oxford, Loafer, Business casual và Handmade — hoàn toàn khớp với năng lực sản xuất của VENASS. Với khoảng trống nhà cung cấp Việt Nam trên Alibaba, việc lên sàn ngay bây giờ với định vị da thật &amp; thủ công sẽ giúp VENASS giành lợi thế tiên phong và xây kênh xuất khẩu trực tiếp, biên lợi nhuận cao.
+</div>
+
+<h3 class="sub-title">Từ khóa tìm kiếm nhiều nhất trên Alibaba.com</h3>
+<p>Dưới đây là các từ khóa người mua quốc tế dùng nhiều nhất khi tìm giày da nam trên Alibaba.com. Tín hiệu nhu cầu được đo bằng <strong>số lượng RFQ (yêu cầu báo giá) đang mở</strong> và các cụm "Related Searches" trên sàn — phản ánh trực tiếp nhu cầu tìm mua thật. Theo đó, từ khóa <strong>"leather shoes" có 521 RFQ</strong> và <strong>"men leather shoes" có 168 RFQ</strong> đang mở <a href="https://sourcing.alibaba.com/rfq/rfq_search_list.htm?searchText=men+leather+shoes" target="_blank" class="citation">[Nguồn]</a>.</p>
+<div class="table-container">
+<table>
+<thead><tr><th>Từ khóa</th><th>Nhóm</th><th>Tín hiệu nhu cầu</th></tr></thead>
+<tbody>
+<tr><td>men leather shoes</td><td>Lõi sản phẩm</td><td>168 RFQ đang mở — từ khóa chính của ngành</td></tr>
+<tr><td>leather shoes for men</td><td>Lõi sản phẩm</td><td>Related search hàng đầu trên Alibaba RFQ</td></tr>
+<tr><td>mens dress shoes</td><td>Lõi sản phẩm</td><td>Related search + danh mục Dress Shoes &amp; Oxfords</td></tr>
+<tr><td>men's leather sneakers</td><td>Lõi + xu hướng</td><td>Related search, nhu cầu tăng ở khách Âu–Mỹ</td></tr>
+<tr><td>men oxford shoes / brogue</td><td>Kiểu dáng</td><td>Danh mục Dress Shoes &amp; Oxfords — nhu cầu đều quanh năm</td></tr>
+<tr><td>leather loafers men / penny loafer / monk strap</td><td>Kiểu dáng</td><td>Danh mục Loafers — mạnh ở khách Âu–Mỹ</td></tr>
+<tr><td>business casual leather shoes men</td><td>Use-case</td><td>Xu hướng làm việc linh hoạt, nhu cầu tăng</td></tr>
+<tr><td>office shoes men leather</td><td>Use-case</td><td>Xuất hiện nhiều trong RFQ (Office &amp; Career)</td></tr>
+<tr><td>wear-resistant genuine leather dress shoes</td><td>Chất liệu / thuộc tính</td><td>Related search "leather shoes" — khách quan tâm độ bền</td></tr>
+<tr><td>wear-resistant genuine leather casual shoes</td><td>Chất liệu / thuộc tính</td><td>Related search "leather shoes"</td></tr>
+<tr><td>goodyear welt leather shoes</td><td>Quy trình cao cấp</td><td>Niche, ít cạnh tranh — biên lợi nhuận cao</td></tr>
+<tr><td>handmade leather dress shoes</td><td>Quy trình cao cấp</td><td>Niche cao cấp, khách đặt theo mẫu</td></tr>
+<tr><td>wholesale men leather shoes</td><td>Ý định mua (B2B)</td><td>Khách bán buôn / nhà phân phối tìm nguồn</td></tr>
+<tr><td>custom leather shoes OEM / private label / custom logo</td><td>Ý định mua (B2B)</td><td>Rất nhiều RFQ yêu cầu custom logo &amp; thương hiệu riêng</td></tr>
+<tr><td>leather boots</td><td>Danh mục mở rộng</td><td>Related search — mùa thu/đông</td></tr>
+<tr><td>vietnam leather shoes manufacturer</td><td>Xuất xứ</td><td>Lợi thế riêng của Venas — ít đối thủ nội địa</td></tr>
+</tbody>
+</table>
+</div>
+<h4 style="color:var(--p);margin:1.2rem 0 0.6rem 0;font-size:1rem;">Danh mục phụ có nhu cầu tìm mua cao nhất (theo số RFQ đang mở)</h4>
+<div class="table-container">
+<table>
+<thead><tr><th>Danh mục phụ</th><th>Số RFQ ("leather shoes")</th><th>Số RFQ ("men leather shoes")</th></tr></thead>
+<tbody>
+<tr><td>Walking Style Shoes</td><td>101</td><td>58</td></tr>
+<tr><td>Dress Shoes &amp; Oxfords</td><td>42</td><td>21</td></tr>
+<tr><td>Safety Shoes</td><td>33</td><td>20</td></tr>
+<tr><td>Loafers</td><td>8</td><td>2</td></tr>
+<tr><td>Sandals</td><td>5</td><td>3</td></tr>
+<tr><td>Chelsea Boots</td><td>4</td><td>2</td></tr>
+<tr><td>Boat Shoes</td><td>3</td><td>3</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.82rem;color:#7B8794;">Nguồn: Alibaba.com RFQ Search — số lượng RFQ và danh mục truy cập ngày 05/10/2026. Số RFQ thay đổi liên tục; nên theo dõi định kỳ để cập nhật từ khóa cho listing. Nhóm "Dress Shoes &amp; Oxfords" và "Loafers" khớp trực tiếp với dòng sản phẩm mạnh của Venas — nên ưu tiên đưa các từ khóa này vào tiêu đề &amp; mô tả sản phẩm.</p>
+<div class="source-list" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--bg);">
+<h2 class="sub-title"><i class="fa-solid fa-link"></i> Danh sách nguồn tham khảo</h2>
+<ol style="font-size: 0.82rem; line-height: 1.9;">
+<li><strong>Nhà cung cấp (VN):</strong> <a href="https://thsshoes.trustpass.alibaba.com/company_profile.html" target="_blank" class="citation">TUAN HUNG SHOES – Alibaba Store</a> · <a href="https://hatayshoes.trustpass.alibaba.com/company_profile.html" target="_blank" class="citation">HA TAY CHEMICAL-WEAVE – Alibaba Store</a> · <a href="https://vn1575972534jupd.trustpass.alibaba.com/company_profile.html" target="_blank" class="citation">SWINGMELL RETAIL – Alibaba Store</a></li>
+<li><strong>Nhà cung cấp (toàn cầu):</strong> <a href="https://cqlcxy.en.alibaba.com/company_profile.html" target="_blank" class="citation">Chongqing Langchi Shoes – Store</a> · <a href="https://huizumei.en.alibaba.com/company_profile.html" target="_blank" class="citation">Guangzhou Weirui Shoes – Store</a> · <a href="https://happygobusiness.en.alibaba.com/company_profile.html" target="_blank" class="citation">Guangzhou Happybuy Trading – Store</a> · <a href="https://gdmingdaxieye.en.alibaba.com/company_profile.html" target="_blank" class="citation">Guangdong Mingda Shoes – Store</a></li>
+<li><strong>Sản phẩm (mẫu tiêu biểu):</strong> <a href="https://www.alibaba.com/product-detail/Men-s-Genuine-Calfskin-Leather-Oxford_1600754401866.html" target="_blank" class="citation">Oxford da bò Italy – Product Page</a> · <a href="https://www.alibaba.com/product-detail/Senpin-2025-Men-Genuine-Leather-Slip_1601444281650.html" target="_blank" class="citation">Loafer da thật Senpin – Product Page</a> · <a href="https://www.alibaba.com/product-detail/Exquisite-Workmanship-Mens-Dress-Shoes-Oxford_1600307615937.html" target="_blank" class="citation">Handmade Oxford – Product Page</a></li>
+<li><strong>Dữ liệu giá:</strong> <a href="https://www.alibaba.com/product-detail/Genuine-Cow-Leather-Men-s-Business_1601908688206.html" target="_blank" class="citation">Business casual – Price Listing</a> · <a href="https://www.alibaba.com/product-detail/Men-s-Black-Leather-Oxford-Dress_1601875815122.html" target="_blank" class="citation">Oxford giá phổ thông – Price Listing</a></li>
+<li><strong>Nghiên cứu thị trường:</strong> <a href="https://localandglobaleco.com/2025/05/27/stepping-ahead-in-style-and-sustainability-leather-footwear-industry-outlook-2025/" target="_blank" class="citation">Leather &amp; Footwear Industry Outlook 2025</a> · <a href="https://www.researchandmarkets.com/reports/5938569/leather-footwear-market-global-industry-size" target="_blank" class="citation">Leather Footwear Market – Global Size &amp; Share</a> · <a href="https://www.custommarketinsights.com/report/luxury-footwear-market/" target="_blank" class="citation">Global Luxury Footwear Market</a> · <a href="https://www.reportlinker.com/dataset/f38cbecb931b68382499ce23625626ad5cd2d19f" target="_blank" class="citation">Top Importers of Footwear</a> · <a href="https://www.linkedin.com/pulse/global-market-leather-shoes-exports-2022-tendata-guodong-cui-r2v7c" target="_blank" class="citation">Global Market for Leather Shoes Exports – Tendata</a></li>
+<li><strong>Việt Nam &amp; thương mại:</strong> <a href="https://itpc.hochiminhcity.gov.vn/web/en/-/vietnam-is-world-s-second-largest-footwear-exporter" target="_blank" class="citation">Vietnam – world's 2nd largest footwear exporter (ITPC)</a> · <a href="https://www.vietnamtradeportal.gov.vn/index.php?r=site/display&id=3224" target="_blank" class="citation">Vietnam Trade Portal – Leather &amp; footwear export orders</a> · <a href="https://www.theconsumersfeedback.com/guestpost/vietnam-footwear-export-markets-2025-top-destinations-driving-vietnam-footwear-exports/tags/Vietnam-footwear-exports-by-country" target="_blank" class="citation">Vietnam Footwear Export Markets 2025</a> · <a href="https://asemconnectvietnam.gov.vn/default.aspx?ZID1=8&ID1=2&ID8=142668" target="_blank" class="citation">ASEM Connect – Việt Nam xuất khẩu giày dép Q1/2025</a></li>
+<li><strong>Từ khóa (Keywords):</strong> <a href="https://www.alibaba.com/trade/search?SearchText=men+leather+dress+shoes" target="_blank" class="citation">men leather dress shoes – Alibaba Search</a> · <a href="https://www.alibaba.com/trade/search?SearchText=men+leather+loafer+slip+on+shoes" target="_blank" class="citation">men leather loafer slip on shoes – Alibaba Search</a> · <a href="https://www.alibaba.com/trade/search?SearchText=handmade+goodyear+welt+leather+shoes" target="_blank" class="citation">handmade goodyear welt leather shoes – Alibaba Search</a></li>
+<li><strong>RFQ &amp; chiến lược:</strong> <a href="https://sourcing.alibaba.com/rfq/rfq_search_list.htm?searchText=leather+shoes" target="_blank" class="citation">Alibaba RFQ – "leather shoes"</a> · <a href="https://www.alibaba.com/trade/search?SearchText=business+casual+leather+shoes+men" target="_blank" class="citation">business casual leather shoes men – Alibaba Search</a></li>
+</ol>
+</div>
+
+<div class="research-notes">
+<h3><i class="fa-solid fa-magnifying-glass-chart"></i> Ghi chú nghiên cứu</h3>
+<div class="table-container">
+<table class="source-table">
+<thead><tr><th>Nguồn</th><th>Dữ liệu sử dụng</th><th>Liên kết</th></tr></thead>
+<tbody>
+<tr><td>Alibaba.com – Product Search</td><td>24 sản phẩm giày da nam (ảnh CDN, giá FOB, MOQ, nhà cung cấp, URL)</td><td><a href="https://www.alibaba.com/trade/search?SearchText=men+leather+dress+shoes" target="_blank">Xem</a></td></tr>
+<tr><td>Alibaba.com – Supplier Search</td><td>Nhà cung cấp VN &amp; toàn cầu (tên, store URL, doanh thu, số năm)</td><td><a href="https://www.alibaba.com/trade/search?SearchText=leather+shoes+manufacturer" target="_blank">Xem</a></td></tr>
+<tr><td>Alibaba Sourcing – RFQ</td><td>521 RFQ "leather shoes"; quốc gia người mua, khối lượng, yêu cầu</td><td><a href="https://sourcing.alibaba.com/rfq/rfq_search_list.htm?searchText=leather+shoes" target="_blank">Xem</a></td></tr>
+<tr><td>Leather &amp; Footwear Industry Outlook 2025</td><td>Quy mô thị trường giày da 2025 ($195,2B) → 2030 ($247,5B)</td><td><a href="https://localandglobaleco.com/2025/05/27/stepping-ahead-in-style-and-sustainability-leather-footwear-industry-outlook-2025/" target="_blank">Xem</a></td></tr>
+<tr><td>Research and Markets</td><td>CAGR ngành giày da 2022–2028 (3,9%)</td><td><a href="https://www.researchandmarkets.com/reports/5938569/leather-footwear-market-global-industry-size" target="_blank">Xem</a></td></tr>
+<tr><td>Vietnam Trade Portal / ITPC</td><td>Việt Nam #2 xuất khẩu giày da; thị trường chính; tăng trưởng theo khu vực</td><td><a href="https://www.vietnamtradeportal.gov.vn/index.php?r=site/display&id=3224" target="_blank">Xem</a></td></tr>
+</tbody>
+</table>
+</div>
+<h3 style="font-size:0.95rem;margin-top:1.2rem;"><i class="fa-solid fa-magnifying-glass"></i> Từ khóa tìm kiếm đã dùng</h3>
+<ul style="font-size:0.82rem;line-height:1.7;padding-left:1.2rem;">
+<li><code>men leather dress shoes oxford formal</code></li>
+<li><code>men leather loafer slip on shoes</code></li>
+<li><code>handmade goodyear welt leather dress shoes men custom</code></li>
+<li><code>business casual leather shoes men office</code></li>
+<li><code>vietnam leather shoes manufacturer</code></li>
+<li><code>leather shoes factory manufacturer OEM ODM</code></li>
+<li><code>global leather footwear market size 2026</code></li>
+<li><code>Vietnam footwear export 2025 top markets US EU</code></li>
+</ul>
+</div>
+</div>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-brand-block">
+<div class="footer-logo"><i class="fa-solid fa-shoe-prints"></i><span>Báo cáo thị trường B2B</span></div>
+<p>Báo cáo phân tích thị trường xuất khẩu giày da nam Việt Nam trên Alibaba.com 2026 — dòng mẫu bán chạy, dư địa thị trường, quốc gia nhập khẩu, phân tích giá &amp; chiến lược xuất khẩu. Dữ liệu được tổng hợp từ Alibaba.com và các nguồn thương mại công khai, tháng 10/2026.</p>
+</div>
+<div class="footer-contact-card">
+<h3>Liên hệ tư vấn</h3>
+<p class="fc-name">Ý Nhi</p>
+<a class="footer-action" href="mailto:phanthiyn02330088@alibaba-inc.com?subject=Báo cáo thị trường giày da nam Việt Nam 2026"><i class="fa-solid fa-envelope"></i><span>phanthiyn02330088@alibaba-inc.com</span></a>
+<a class="footer-action" href="tel:034976020"><i class="fa-solid fa-phone"></i><span>034976020</span></a>
+</div>
+</div>
+<div class="foot-bottom"><span>&copy; 2026 Alibaba B2B Expert. Báo cáo thị trường B2B.</span><span>Ngôn ngữ: Tiếng Việt</span></div>
+</footer>
+</div>
+<script>
+    function initChart(canvasId, config) {
+      var canvas = document.getElementById(canvasId); if (!canvas) return null;
+      config.options = config.options || {};
+      config.options.responsive = true;
+      config.options.maintainAspectRatio = false;
+      config.options.layout = config.options.layout || { padding: 12 };
+      config.options.plugins = config.options.plugins || {};
+      var legendDefaults = { position: 'bottom', labels: { boxWidth: 18, padding: 18, font: { size: 12, family: 'Lexend' } } };
+      var legendUser = config.options.plugins.legend || {};
+      config.options.plugins.legend = Object.assign({}, legendDefaults, legendUser);
+      if (legendUser.labels) { config.options.plugins.legend.labels = Object.assign({}, legendDefaults.labels, legendUser.labels); }
+      if (legendUser.labels && legendUser.labels.font) { config.options.plugins.legend.labels.font = Object.assign({}, legendDefaults.labels.font, legendUser.labels.font); }
+      var titleDefaults = { padding: { bottom: 18 }, color: '#002B5B', font: { size: 16, weight: '700', family: 'Lexend' } };
+      var titleUser = config.options.plugins.title || {};
+      config.options.plugins.title = Object.assign({}, titleDefaults, titleUser);
+      if (titleUser.font) { config.options.plugins.title.font = Object.assign({}, titleDefaults.font, titleUser.font); }
+      config.options.scales = config.options.scales || {};
+      var scaleFontDefault = { family: 'Lexend', size: 11 };
+      ['x', 'y'].forEach(function(axis) {
+        config.options.scales[axis] = config.options.scales[axis] || {};
+        config.options.scales[axis].ticks = config.options.scales[axis].ticks || {};
+        config.options.scales[axis].ticks.font = Object.assign({}, scaleFontDefault, config.options.scales[axis].ticks.font || {});
+      });
+      return new Chart(canvas.getContext('2d'), config);
+    }
+    try {
+      initChart('shareChart', { type: 'doughnut', data: { labels: ['Trung Quốc','Việt Nam','Italy','Đức','Indonesia','Khác'], datasets: [{ data: [36,14,9,5,4,32], backgroundColor:['#002B5B','#D4A017','#1F75FE','#27AE60','#8E6BAF','#E0E6F2'] }] }, options: { plugins: { title: { display: true, text: 'Thị phần xuất khẩu giày da toàn cầu (%)', font: {size: 16, family: 'Lexend'} }, legend: { position: 'bottom', labels: { font: { family: 'Lexend', size: 11 } } } } } });
+      initChart('growthChart', { type: 'line', data: { labels: ['2023','2024','2025','2026*'], datasets: [{ label: 'Kim ngạch xuất khẩu (tỷ USD)', data: [24.0,26.5,29.0,31.5], borderColor: '#1F75FE', backgroundColor: 'rgba(31,117,254,0.12)', fill: true, tension: 0.3 }] }, options: { plugins: { title: { display: true, text: 'Xuất khẩu giày dép Việt Nam theo năm', font: {size: 16, family: 'Lexend'} }, legend: { labels: { font: { family: 'Lexend', size: 11 } } } }, scales: { x: { ticks: { font: { family: 'Lexend', size: 11 } } }, y: { ticks: { font: { family: 'Lexend', size: 11 } } } } } });
+      initChart('exportCountriesChart', { type: 'bar', data: { labels: ['Trung Quốc','Việt Nam','Italy','Đức','Indonesia'], datasets: [{ label: 'Thị phần xuất khẩu (%)', data: [36,14,9,5,4], backgroundColor: '#27AE60' }] }, options: { indexAxis: 'y', plugins: { title: { display: true, text: 'Top 5 quốc gia xuất khẩu giày da', font: {size: 16, family: 'Lexend'} }, legend: { labels: { font: { family: 'Lexend', size: 11 } } } }, scales: { x: { ticks: { font: { family: 'Lexend', size: 11 } } }, y: { ticks: { font: { family: 'Lexend', size: 11 } } } } } });
+      initChart('importCountriesChart', { type: 'bar', data: { labels: ['Hoa Kỳ','Đức','Pháp','Anh','Nhật Bản'], datasets: [{ label: 'Thị phần nhập khẩu (%)', data: [20,8,6,5,4], backgroundColor: '#D4A017' }] }, options: { indexAxis: 'y', plugins: { title: { display: true, text: 'Top 5 thị trường nhập khẩu giày da', font: {size: 16, family: 'Lexend'} }, legend: { labels: { font: { family: 'Lexend', size: 11 } } } }, scales: { x: { ticks: { font: { family: 'Lexend', size: 11 } } }, y: { ticks: { font: { family: 'Lexend', size: 11 } } } } } });
+      initChart('priceChart', { type: 'bar', data: { labels: ['Oxford/Derby','Loafer','Business casual','Handmade'], datasets: [{ label: 'Giá thấp (USD)', data: [6,5.85,1.25,24], backgroundColor: '#E0E6F2' },{ label: 'Giá cao (USD)', data: [149,129,64,321], backgroundColor: '#1F75FE' }] }, options: { scales: { y: { beginAtZero: true, ticks: { callback: function(value) { return '$' + value; }, font: { family: 'Lexend', size: 11 } } }, x: { ticks: { font: { family: 'Lexend', size: 11 } } } }, plugins: { title: { display: true, text: 'Dải giá FOB theo nhóm sản phẩm (USD/đôi)', font: {size: 16, family: 'Lexend'} }, legend: { labels: { font: { family: 'Lexend', size: 11 } } } } } });
+      // Venas product coverage chart (Chapter 4)
+      initChart('venasCoverageChart', { type: 'bar', data: { labels: ['Oxford / Derby công sở','Loafer / Slip-on da thật','Business casual','Handmade Goodyear'], datasets: [{ label: 'Số mẫu Venas đang có', data: [7,11,2,0], backgroundColor: ['#1F75FE','#1F75FE','#D4A017','#C0392B'] }] }, options: { indexAxis: 'y', plugins: { legend: { display: false }, title: { display: true, text: 'Độ phủ danh mục giày nam Venas theo nhóm mẫu bán chạy', font: {size: 16, family: 'Lexend'} } }, scales: { x: { beginAtZero: true, ticks: { stepSize: 2, font: { family: 'Lexend', size: 11 } } }, y: { ticks: { font: { family: 'Lexend', size: 11 } } } } } });
+    } catch(e) { console.error(e); }
+  </script>
+</body>
+</html>
